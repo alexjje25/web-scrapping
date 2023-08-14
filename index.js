@@ -15,29 +15,6 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
 });
 
-
-app.get('/results', (req, res) => {
-  fs.readFile('data.json', 'utf8', (err, data) => {
-    if (err) {
-      console.error('Error reading data from data.json:', err);
-      res.status(500).send('Error reading data from data.json.');
-    } else {
-      const scrapedData = JSON.parse(data);
-      res.render('result', {
-        priceValueIda: scrapedData.priceValueIda,
-        priceValuesVolta: scrapedData.priceValuesVolta,
-        departureTime: scrapedData.departureTime,
-        chegadaTime: scrapedData.chegadaTime,
-        empresa: scrapedData.empresa,
-        duration: scrapedData.duration,
-        destino: scrapedData.destino,
-        origem: scrapedData.origem,
-        dataContentValuesLeito: scrapedData.dataContentValuesLeito
-      });
-    }
-  });
-});
-
 app.post('/results', (req, res) => {
   const baseUrl = 'https://www.clickbus.com.br/onibus/';
 
@@ -105,6 +82,8 @@ app.post('/results', (req, res) => {
         return $(element).text();
       }).get();
 
+     
+
       // Formatar os dados para serem enviados ao arquivo PHP
       if (
         priceValueIda.length === 0 &&
@@ -159,6 +138,7 @@ app.post('/results', (req, res) => {
               origem: origem,
               dataContentValuesLeito: dataContentValuesLeito
             });
+            res.redirect('/results');
           })
           .catch(error => {
             console.error('Erro ao enviar dados para o PHP:', error);
