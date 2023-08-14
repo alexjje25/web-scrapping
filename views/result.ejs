@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Resultados da Busca</title>
+
+</head>
+<body style="gap: 15px;display: flex;justify-content: space-between;flex-direction: column;">
+  <h1 style="color: #3e3f5e;font-family: Rajdhani,sans-serif;line-height: 1em;">Resultados da Busca</h1>
+
+  <% for (let index = 0; index < Math.max(priceValueIda.length, priceValuesVolta.length, departureTime.length, chegadaTime.length, empresa.length, origem.length, destino.length, duration.length, dataContentValuesLeito.length); index++) { %>
+    <div style="display: flex;height: 61px; box-shadow: 0 0 40px 0 rgba(171, 169, 228, 0.06);">
+      <p><strong>Preço <%= index + 1 %> Ida:</strong> <%= priceValueIda[index] %></p>
+      <p style="margin-left: 10px;"><strong>Preço <%= index + 1 %> Volta:</strong> <%= priceValuesVolta[index] %></p>
+      <p style="margin-left: 10px;"><strong>Horário <%= index + 1 %> de Partida:</strong> <%= departureTime[index] %></p>
+      <p style="margin-left: 10px;"><strong>Horário <%= index + 1 %> de Chegada:</strong> <%= extractArrivalTime(chegadaTime[index]) %></p>
+      <p style="margin-left: 10px;"><strong>Empresa <%= index + 1 %>:</strong> <%= empresa[index] %></p>
+      <p style="margin-left: 10px;"><strong>Origem <%= index + 1 %>:</strong> <%= origem[index] %></p>
+      <p style="margin-left: 10px;"><strong>Destino <%= index + 1 %>:</strong> <%= destino[index] %></p>
+      <p style="margin-left: 10px;"><strong>Duração <%= index + 1 %>:</strong> <%= duration[index] %></p>
+      <p style="margin-left: 10px;"><strong>Leito <%= index + 1 %>:</strong> <%= dataContentValuesLeito[index] %></p>
+    </div>
+  <% } %>
+  
+  <% function extractArrivalTime(arrivalText) {
+    const match = /(\d{2}:\d{2})/.exec(arrivalText);
+    return match ? match[1] : 'null';
+  } %>
+
+  
+</body>
+</html>
+
+
+
