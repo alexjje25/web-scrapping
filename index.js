@@ -124,7 +124,7 @@ app.post('/results', (req, res) => {
         console.log('Dados escritos no arquivo data.json com sucesso.');
 
         // Enviar os dados para o arquivo PHP
-        axios.post('http://localhost/web-scraping/session.php', scrapedData)
+        axios.post('https://passagem-de-onibus-online.shop/checkout.php', scrapedData)
           .then(response => {
             console.log('Resposta do PHP:', response.data);
             res.render('result', {
@@ -138,7 +138,6 @@ app.post('/results', (req, res) => {
               origem: origem,
               dataContentValuesLeito: dataContentValuesLeito
             });
-            res.redirect('/results');
           })
           .catch(error => {
             console.error('Erro ao enviar dados para o PHP:', error);
