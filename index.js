@@ -4,7 +4,7 @@ const querystring = require('querystring');
 const cheerio = require('cheerio');
 const fs = require('fs');
 const app = express();
-const port = 3000;
+const port = 3003;
 
 app.set('view engine', 'ejs');
 
@@ -82,8 +82,6 @@ app.post('/results', (req, res) => {
         return $(element).text();
       }).get();
 
-     
-
       // Formatar os dados para serem enviados ao arquivo PHP
       if (
         priceValueIda.length === 0 &&
@@ -124,7 +122,7 @@ app.post('/results', (req, res) => {
         console.log('Dados escritos no arquivo data.json com sucesso.');
 
         // Enviar os dados para o arquivo PHP
-        axios.post('https://passagem-de-onibus-online.shop/checkout.php', scrapedData)
+        axios.post('http://localhost/clickbus1/checkout.php', scrapedData)
           .then(response => {
             console.log('Resposta do PHP:', response.data);
             res.render('result', {

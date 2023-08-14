@@ -1,0 +1,177 @@
+.mkTopoInfo {
+  position: relative;
+  top: 0;
+  font-family: Circular, spotify-circular, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  min-height: 54px;
+  background: #000;
+  z-index: 1020;
+}
+.mkLogoInfo {
+  fill: #fff;
+  width: 132px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.mkCaixaInfo {
+  margin: 32px auto;
+  width: 100%;
+  max-width: 458px;
+  padding: 24px;
+  box-shadow: rgb(0 0 0 / 15%) 0px 0px 10px 0px;
+  border-radius: 3px;
+}
+.mkBandeiraTipo ul {
+  display: flex;
+  flex-direction: row;
+  -webkit-box-align: center;
+  align-items: center;
+  padding-left: 0px;
+  padding-bottom: 0px;
+  margin: 0px;
+  list-style: none;
+}
+.mkBandeiraTipo ul li {
+  margin-right: 6px;
+}
+.mkBandeiraTipo ul li img {
+  display: block;
+  height: 24px;
+  width: auto;
+  max-width: 64px;
+}
+.mkTipo {
+  padding: 0px 16px;
+  height: 100%;
+  -webkit-box-pack: start;
+  justify-content: start;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  color: var(--text-base, #000000);
+  text-decoration: none;
+  background-color: var(--background-highlight, #f6f6f6);
+  margin-bottom: 0px;
+  height: 90px;
+  border: 1px solid var(--essential-subdued, #878787);
+}
+.mkTituloDadosInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.container-frm .frm .frm-item {
+  width: 100%;
+  height: 53px;
+  position: relative;
+  margin: 10px 0px;
+  display: inline-block;
+  border: 1px solid #878787;
+  border-radius: 4px 4px 4px 4px;
+}
+.container-frm .frm .frm-item:focus-within {
+  border: 2px solid #000;
+}
+.container-frm .frm .frm-item:hover {
+  border: 2px solid #000;
+}
+.container-frm #frm-pf .frm-item:last-of-type {
+  height: auto;
+  margin: 0px 0px 50px 0px;
+  border: 0px;
+}
+.container-frm .frm .frm-item select,
+.container-frm .frm .frm-item input {
+  width: 100%;
+  height: 35px;
+  position: absolute;
+  left: 0px;
+  bottom: 8px;
+  font-family: sans-serif;
+  font-size: 16px;
+  color: #000;
+  background: none;
+  outline: none;
+  border: 0px;
+}
+.container-frm .frm .frm-item input {
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+.container-frm .frm .frm-item .lb-float {
+  font-size: 16px;
+  color: rgb(0 0 0 / 46%);
+  position: absolute;
+  top: 16px;
+  left: 15px;
+  transition: all 0.2s;
+  padding: 1px;
+  background: #fff;
+  z-index: 9;
+}
+.container-frm .frm .frm-item input:focus {
+  /*border-bottom: solid 2px #5252d4;*/
+  top: 10px;
+}
+
+.container-frm .frm .frm-item input:focus + .lb-float,
+.container-frm .frm .frm-item input:valid + .lb-float {
+  font-size: 14px;
+  top: -19px;
+  color: #5252d4;
+  background: #fff;
+  padding: 5px;
+}
+.container-frm .frm .frm-item span {
+  font-size: 15px;
+  font-weight: 500;
+  color: #535353;
+}
+#provider-icons {
+  pointer-events: none;
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  z-index: 1;
+  width: 34px;
+  height: 24px;
+  background-image: url(data:image/svg+xml,%3Csvg%20width%3D%2234%22%20height%3D%2224%22%20viewBox%3D%220%200%2034%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.5%22%20y%3D%220.5%22%20width%3D%2233%22%20height%3D%2223%22%20rx%3D%222.5%22%20fill%3D%22white%22%20stroke%3D%22%237F7F7F%22%2F%3E%0A%3Crect%20x%3D%224%22%20y%3D%2218%22%20width%3D%2212%22%20height%3D%221%22%20fill%3D%22%23B3B3B3%22%2F%3E%0A%3Crect%20x%3D%224%22%20y%3D%2215%22%20width%3D%225%22%20height%3D%221.5%22%20fill%3D%22%237F7F7F%22%2F%3E%0A%3Crect%20x%3D%2211%22%20y%3D%2215%22%20width%3D%225%22%20height%3D%221.5%22%20fill%3D%22%237F7F7F%22%2F%3E%0A%3Crect%20x%3D%2218%22%20y%3D%2215%22%20width%3D%225%22%20height%3D%221.5%22%20fill%3D%22%237F7F7F%22%2F%3E%0A%3Crect%20x%3D%2225%22%20y%3D%2215%22%20width%3D%225%22%20height%3D%221.5%22%20fill%3D%22%237F7F7F%22%2F%3E%0A%3Crect%20x%3D%224%22%20y%3D%228%22%20width%3D%226%22%20height%3D%224%22%20rx%3D%221%22%20fill%3D%22%23B3B3B3%22%2F%3E%0A%3C%2Fsvg%3E%0A);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#mkBtnConfirmInfo {
+  width: 100%;
+  height: 60px;
+  border-radius: 50px;
+  background: #1ed760;
+  border: none;
+  color: #000;
+  margin-top: 40px;
+}
+#mkBtnConfirmInfo:focus {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+#mkBtnConfirmInfo span {
+  color: #000;
+}
+.mkIcoCvv {
+  float: right;
+  margin-top: 15px;
+  margin-right: 8px;
+}
+.mkLoading .spinner-border {
+  width: 4rem;
+  height: 4rem;
+}
+.mkLoading i {
+  position: relative;
+  bottom: 21px;
+  right: 48px;
+  font-size: 25px;
+}
