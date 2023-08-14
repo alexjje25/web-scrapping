@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
 });
 
-app.post('/results', (req, res) => {
+app.post('/results11', (req, res) => {
   const baseUrl = 'https://www.clickbus.com.br/onibus/';
 
   const params = {
